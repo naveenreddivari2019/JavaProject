@@ -24,6 +24,12 @@ public class ShallowCloning implements  Cloneable{
     public ShallowCloning(){
         System.out.println("Default Construct....");
     }
+
+    @Override
+    public String toString() {
+        return this.name+" | "+this.age;
+    }
+
     public ShallowCloning(int age, String name){
         this.age=age;
         this.name=name;
@@ -37,6 +43,8 @@ public class ShallowCloning implements  Cloneable{
     public Object Clone() throws CloneNotSupportedException{
         return super.clone();
     }
+
+
 
     @Override
     public int hashCode() {
@@ -52,6 +60,9 @@ public class ShallowCloning implements  Cloneable{
             e.printStackTrace();
         }
         System.out.println("obj1 : "+obj1+"  obj2: "+obj2);
+        obj1.setAge(40);
         System.out.println(" Equals Cond : "+obj1.equals(obj2));
+        obj2.setAge(35);
+        System.out.println("obj1 : "+obj1+"  obj2: "+obj2);
     }
 }
