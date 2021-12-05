@@ -1,4 +1,4 @@
-package lamdaexamples;
+package java8Features;
 
 public class LamdaRunnable {
     public static void main(String[] args) {
